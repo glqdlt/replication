@@ -15,4 +15,9 @@ public class HelloImpl implements Hello {
     public String sayThankYou(String name) {
         return "THX " + name;
     }
+
+    @Override
+    public void echo(String name) {
+        System.out.println("yahoo "+name);
+    }
 }

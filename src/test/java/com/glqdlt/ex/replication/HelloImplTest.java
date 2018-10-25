@@ -44,6 +44,7 @@ public class HelloImplTest {
         Hello upper = (Hello) Proxy.newProxyInstance(getClass().getClassLoader(), new Class[]{Hello.class}, new DynamicHelloUpperCase(hello));
 
         log.info(upper.sayHello("jhun"));
+        upper.echo("jhun");
 
 
     }

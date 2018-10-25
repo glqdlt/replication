@@ -25,4 +25,9 @@ public class HelloUppercase implements Hello {
     public String sayThankYou(String name) {
         return hello.sayThankYou(name).toUpperCase();
     }
+
+    @Override
+    public void echo(String name) {
+        System.out.println("yahoo "+name);
+    }
 }
