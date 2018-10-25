@@ -1,5 +1,7 @@
 package com.glqdlt.ex.replication.factoryBean;
 
+import com.glqdlt.ex.replication.Hello;
+import com.glqdlt.ex.replication.HelloImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +33,16 @@ public class FactoryBeanConfigTest {
         Object obj = applicationContext.getBean("&message");
 
         System.out.println((MessageFactoryBean) obj);
+
+    }
+
+    @Test
+    public void name3() throws Exception {
+
+
+        Hello aa = new HelloFactoryBean(new HelloImpl()).getObject();
+        aa.echo("asdasd");
+        System.out.println(aa.sayHi("we"));
 
     }
 }

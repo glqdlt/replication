@@ -12,4 +12,5 @@ public class FactoryBeanConfig {
         return new MessageFactoryBean("qweqwe").getObject();
 
     }
+
 }
