@@ -19,7 +19,7 @@ public class DynamicHelloUpperCase implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         Object ret= method.invoke(hello, args);
-        if (method.getName().contains("say")) {
+        if (method.getName().startsWith("say")) {
             if (ret instanceof String) {
                 return ((String) ret).toUpperCase()+"!!!@@@";
             }
